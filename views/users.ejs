@@ -15,7 +15,11 @@
         </tr>
       </thead>
       <tbody>
-        <% usersDb.forEach(user => { %>
+        <% if (usersDb.length < 1) { %>
+        <tr>
+          <td>Pesanan kosong</td>
+        </tr>
+        <% } %> <% usersDb.forEach(user => { %>
         <tr>
           <td><%= user.makanan %></td>
           <td><%= user.minuman %></td>
