@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesanan</title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Makanan</th>
+          <th>Minuman</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% usersDb.forEach(user => { %>
+        <tr>
+          <td><%= user.makanan %></td>
+          <td><%= user.minuman %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <h4><a href="/pesan-menu">Pesan Lagi</a></h4>
+  </body>
+</html>
